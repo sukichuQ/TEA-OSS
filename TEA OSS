@@ -1,0 +1,41 @@
+# Import the Tea Protocol library
+from tea.protocol import TeaProtocol
+
+# Create a Tea Protocol instance
+tea_protocol = TeaProtocol()
+
+# Define the music file hash
+file_hash = "0x1234567890abcdef1234567890abcdef1234567890"
+
+# Upload the music file
+tea_protocol.upload_file(file_hash)
+
+# Define the music metadata
+metadata = {
+    "title": "Music Title",
+    "artist": "Music Artist",
+    "album": "Music Album",
+    "genre": "Music Genre",
+    "year": "Music Release Year",
+}
+
+# Add the music metadata
+tea_protocol.add_metadata(file_hash, metadata)
+
+# Get the music file
+file_data = tea_protocol.get_file(file_hash)
+
+# Play the music file
+# ...
+
+# Define the cryptocurrency reward
+reward = 100
+
+# Reward the music creator
+tea_protocol.reward_creator(file_hash, reward)
+
+# Define the payment amount
+amount = 50
+
+# Pay the music creator
+tea_protocol.pay_creator(file_hash, amount)
